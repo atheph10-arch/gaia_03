@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha resposta</title>
+    <style>
+     *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Outfit', sans-serif;
+     }
+     body {
+      height:100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backgroud-color: #fafafa;
+      color: #87ceeb; 
+     }
+     .txt_animado span{
+      font-size: 18px;
+      font-weight: 300;
+     }
+     .txt_animado span{
+      position: relative;
+     }
+     .txt_animado span::before{
+      content:"";
+      color: #ff007b;
+      animation: palavras 20s infinite;
+     }
+     @keyframes palavras {
+      0%,20%{
+       content:" é uma pessoa ESPECIAL!";
+      }
+      21%,40%{
+      content:" é muito INTELIGENTE";
+      }
+      41%,60%{
+       content:" tem algo ÚNICO que as outras não tem!";
+      }
+      61%,80%{
+       content:" é uma pessoa INCLIVÉL, mais isso";
+      }
+      81%,100%{
+       content:" ja sabia, siga enfrente sempre!!! ";
+      }
+     }
+     .txt_animado span::after{
+       content:"";
+       position: absolute;
+       height: 100%;
+       border-left: 2px solid #ff007b;
+       right: -10px;
+      animation: cursor .5s infinite,digita 20s steps(8) infinite;
+       width: calc(100% + 14px);
+       background-color:#fafafa;
+     }
+     @keyframes digita{
+       10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+           width:0;
+       }
+       5%,20%,25%,40%,45%,60%,65%,80%,85%{
+           width: calc(100% + 14px);
+       }
+     }
+     @keyframes cursor{
+       0%{
+           border-left: 2px solid #fafafa;
+       }
+     }
+    </style>
+</head>
+<body>
+    <div class="txt_animado">
+        VOCÊ <span></span>
+    </div>
+</body>
+</html>
+
